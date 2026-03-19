@@ -184,8 +184,8 @@ export const FacultyDetail: React.FC = () => {
             </div>
 
             {/* Quick Links */}
-            <div className="bg-tertiary p-8 rounded-[2.5rem] text-primary">
-              <h3 className="text-xl font-black mb-6">Faculty Resources</h3>
+            <div className="bg-[#bea65d] p-8 rounded-[2.5rem] text-primary">
+              <h3 className="text-xl font-black mb-6"><span style={{color: '#003366'}}>Faculty Resources</span></h3>
               <div className="space-y-3">
                 {['Faculty Handbook', 'Research Ethics', 'Student Council', 'Alumni Portal'].map((link, i) => (
                   <button key={i} className="w-full p-4 bg-white/20 hover:bg-white/40 rounded-2xl flex items-center justify-between transition-all font-bold text-sm">
