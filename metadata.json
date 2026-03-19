@@ -1,0 +1,8 @@
+{
+  "name": "University of Venda Portal",
+  "description": "A high-fidelity academic portal for the University of Venda featuring an AI-powered course recommender and comprehensive academic sections.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
