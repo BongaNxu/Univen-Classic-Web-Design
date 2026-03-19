@@ -9,33 +9,51 @@ export const News: React.FC = () => {
       title: "UNIVEN Celebrates 40 Years of Excellence",
       date: "March 10, 2026",
       category: "Events",
-      image: "https://picsum.photos/seed/univen-news-1/800/600",
+      image: "https://nebworksmedia.com/wp-content/uploads/2026/03/UNIVEN-Celebrates-40-Years-of-Excellence.jpg",
       excerpt: "The University of Venda marks a major milestone with a series of commemorative events and community projects."
     },
     {
       title: "New Research Grant for Climate Adaptation",
       date: "March 08, 2026",
       category: "Research",
-      image: "https://picsum.photos/seed/univen-news-2/800/600",
+      image: "https://nebworksmedia.com/wp-content/uploads/2026/03/New-Research-Grant-for-Climate-Adaptation.jpg",
       excerpt: "Faculty of Science receives R5 million grant to study climate resilience in local agricultural systems."
     },
     {
       title: "Student Leadership Elections Results",
       date: "March 05, 2026",
       category: "Campus Life",
-      image: "https://picsum.photos/seed/univen-news-3/800/600",
+      image: "https://nebworksmedia.com/wp-content/uploads/2026/03/stock-photo-a-cute-black-female-university-student-on-campus-with-backpack-1987030421.jpg",
       excerpt: "The SRC elections concluded successfully with a record voter turnout this year."
     }
   ];
 
   return (
     <div className="bg-white min-h-screen">
+      {/* Hero Section */}
+      <div className="relative h-[400px] overflow-hidden">
+        <img 
+          src="https://www.shutterstock.com/shutterstock/photos/1070837540/display_1500/stock-photo-word-news-formed-by-wood-alphabet-blocks-on-newspaper-1070837540.jpg" 
+          alt="News at UNIVEN" 
+          className="w-full h-full object-cover brightness-50"
+          referrerPolicy="no-referrer"
+        />
+        <div className="absolute inset-0 flex items-center justify-center text-center px-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="max-w-4xl"
+          >
+            <h1 className="text-5xl font-black text-white mb-6 tracking-tight">Latest News</h1>
+            <p className="text-xl text-white/90 leading-relaxed font-medium">
+              Stay updated with the latest happenings, achievements, and events at the University of Venda.
+            </p>
+          </motion.div>
+        </div>
+      </div>
+
       <div className="max-w-[1280px] mx-auto px-6 py-20">
         <div className="flex items-end justify-between mb-16">
-          <div>
-            <h1 className="text-5xl font-black text-primary mb-4 tracking-tight">Latest News</h1>
-            <p className="text-gray-500 text-lg">Stay updated with the latest happenings at UNIVEN.</p>
-          </div>
           <div className="hidden md:flex gap-4">
             {['All', 'Events', 'Research', 'Academic'].map(cat => (
               <button key={cat} className="px-6 py-2 rounded-full border border-gray-200 text-sm font-bold hover:bg-primary hover:text-white transition-all">

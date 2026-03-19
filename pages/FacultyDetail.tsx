@@ -23,7 +23,7 @@ export const FacultyDetail: React.FC = () => {
   return (
     <div className="bg-[#F8F9FA] min-h-screen pb-20">
       {/* Hero Section */}
-      <section className="relative h-[400px] w-full overflow-hidden">
+      <section className="relative h-[600px] w-full overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center" 
           style={{ 
@@ -39,7 +39,7 @@ export const FacultyDetail: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
           >
             <h1 className="text-white text-5xl md:text-6xl font-black leading-tight mb-4">
-              Faculty of <span className="text-tertiary">{faculty.name}</span>
+              Faculty of <span  style={{color: '#bea65d'}}>{faculty.name}</span>
             </h1>
             <p className="text-white/90 text-xl max-w-3xl leading-relaxed">
               {faculty.description}

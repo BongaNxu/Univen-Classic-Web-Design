@@ -6,18 +6,27 @@ import { Microscope, Globe, Lightbulb, BookOpen, BarChart, Zap } from 'lucide-re
 export const Research: React.FC = () => {
   return (
     <div className="bg-white min-h-screen">
-      {/* Header */}
-      <div className="bg-primary py-20 px-6 text-white text-center">
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="max-w-3xl mx-auto"
-        >
-          <h1 className="text-5xl font-black mb-6 tracking-tight">Research & Innovation</h1>
-          <p className="text-xl text-white/80 leading-relaxed">
-            Driving sustainable development through impactful research and community-centered innovation.
-          </p>
-        </motion.div>
+      {/* Hero Section */}
+      <div className="relative h-[400px] overflow-hidden">
+        <img 
+          src="https://www.shutterstock.com/shutterstock/photos/2347502471/display_1500/stock-photo-experimenting-multinational-group-and-science-and-technology-concept-2347502471.jpg" 
+          // src="https://picsum.photos/seed/univen-research/1920/1080" 
+          alt="Research at UNIVEN" 
+          className="w-full h-full object-cover brightness-50"
+          referrerPolicy="no-referrer"
+        />
+        <div className="absolute inset-0 flex items-center justify-center text-center px-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="max-w-4xl"
+          >
+            <h1 className="text-5xl font-black text-white mb-6 tracking-tight">Research & Innovation</h1>
+            <p className="text-xl text-white/90 leading-relaxed font-medium">
+              Driving sustainable development through impactful research and community-centered innovation.
+            </p>
+          </motion.div>
+        </div>
       </div>
 
       <div className="max-w-[1280px] mx-auto px-6 py-20">

@@ -1,6 +1,8 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Search, Filter, BookOpen, GraduationCap, Clock, MapPin, ChevronRight, Star } from 'lucide-react';
 import { COURSES, FACULTIES } from '../constants';
 import { FacultyType } from '../types';
 import { getChatResponse } from '../services/geminiService';
@@ -64,21 +66,37 @@ export const Academics: React.FC = () => {
   };
 
   return (
-    <div className="max-w-[1440px] mx-auto px-6 lg:px-20 py-12">
-      <nav className="mb-6 flex items-center gap-2 text-sm font-medium text-gray-500">
-        <a className="hover:text-primary" href="#">Home</a>
-        <span className="material-symbols-outlined text-xs">chevron_right</span>
-        <span className="text-primary font-bold">Academics</span>
-      </nav>
-
-      <div className="mb-10 flex flex-col gap-3">
-        <h1 className="text-4xl font-black tracking-tight text-primary">Explore our Academics</h1>
-        <p className="max-w-2xl text-lg text-gray-600 leading-relaxed">
-          Discover a wide range of undergraduate and postgraduate programs designed to shape your future at the University of Venda.
-        </p>
+    <div className="bg-white">
+      {/* Hero Section */}
+      <div className="relative h-[400px] overflow-hidden">
+        <img 
+          src="https://www.shutterstock.com/shutterstock/photos/2210718325/display_1500/stock-photo-university-international-and-scholarship-students-talking-of-study-opportunity-school-education-2210718325.jpg" 
+          alt="Academics at UNIVEN" 
+          className="w-full h-full object-cover object-center brightness-50"
+          referrerPolicy="no-referrer"
+        />
+        <div className="absolute inset-0 flex items-center justify-center text-center px-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="max-w-4xl"
+          >
+            <h1 className="text-5xl font-black text-white mb-6 tracking-tight">Explore our Academics</h1>
+            <p className="text-xl text-white/90 leading-relaxed font-medium">
+              Discover a wide range of undergraduate and postgraduate programs designed to shape your future at the University of Venda.
+            </p>
+          </motion.div>
+        </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-8">
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-20 py-12">
+        <nav className="mb-6 flex items-center gap-2 text-sm font-medium text-gray-500">
+          <Link className="hover:text-primary" to="/">Home</Link>
+          <span className="material-symbols-outlined text-xs">chevron_right</span>
+          <span className="text-primary font-bold">Academics</span>
+        </nav>
+
+        <div className="flex flex-col lg:flex-row gap-8">
         {/* Sidebar Filters */}
         <aside className="w-full lg:w-72 flex-shrink-0">
           <div className="sticky top-24 flex flex-col gap-6">
@@ -259,5 +277,6 @@ export const Academics: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  </div>
+);
 };

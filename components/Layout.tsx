@@ -67,7 +67,8 @@ const Header = () => {
           <div className="flex items-center gap-12">
             <Link to="/" className="flex items-center gap-3">
               <img 
-                src="https://nebworksmedia.com/wp-content/uploads/2026/03/univen-logo.png" 
+                src="https://nebworksmedia.com/wp-content/uploads/2026/03/LogoUnivenXLWeb.png" 
+                // src="https://nebworksmedia.com/wp-content/uploads/2026/03/univen-logo.png" 
                 alt="University of Venda Logo" 
                 className={`w-auto object-contain hover:opacity-90 transition-all duration-300 ${
                   isScrolled ? 'h-20' : 'h-28'

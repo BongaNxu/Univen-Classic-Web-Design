@@ -6,10 +6,32 @@ import { Book, Search, Clock, Monitor, Coffee, HelpCircle } from 'lucide-react';
 export const Library: React.FC = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
+      {/* Hero Section */}
+      <div className="relative h-[400px] overflow-hidden">
+        <img 
+          src="https://www.shutterstock.com/shutterstock/photos/2477879657/display_1500/stock-photo-two-young-male-students-climb-a-bookshelf-in-a-library-2477879657.jpg" 
+          // src="https://picsum.photos/seed/univen-library/1920/1080" 
+          alt="UNIVEN Library" 
+          className="w-full h-full object-cover brightness-50"
+          referrerPolicy="no-referrer"
+        />
+        <div className="absolute inset-0 flex items-center justify-center text-center px-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="max-w-4xl"
+          >
+            <h1 className="text-5xl font-black text-white mb-6 tracking-tight">University Library</h1>
+            <p className="text-xl text-white/90 leading-relaxed font-medium">
+              Access a world of knowledge through our extensive collection of digital and physical resources.
+            </p>
+          </motion.div>
+        </div>
+      </div>
+
       {/* Search Header */}
-      <div className="bg-white border-b border-gray-200 py-16 px-6">
+      <div className="bg-white border-b border-gray-200 py-12 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-black text-primary mb-8 tracking-tight">University Library</h1>
           <div className="relative">
             <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400" size={24} />
             <input 

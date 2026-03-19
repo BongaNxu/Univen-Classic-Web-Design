@@ -7,49 +7,41 @@ export const Admissions: React.FC = () => {
   return (
     <div className="bg-[#F8F9FA] min-h-screen pb-20">
       {/* Hero Section */}
-      <section className="bg-white py-16 md:py-24">
-        <div className="max-w-[1280px] mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+      <div className="relative h-[400px] overflow-hidden">
+        <img 
+          src="https://picsum.photos/seed/univen-admissions/1920/1080" 
+          alt="Admissions at UNIVEN" 
+          className="w-full h-full object-cover brightness-50"
+          referrerPolicy="no-referrer"
+        />
+        <div className="absolute inset-0 flex items-center justify-center text-center px-6">
           <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="flex-1"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="max-w-4xl"
           >
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-0.5 bg-secondary"></div>
-              <span className="text-primary font-bold text-xs uppercase tracking-widest">Admissions 2026/2027</span>
-            </div>
-            <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-tight">
-              Start Your Future at <span className="text-primary">UNIVEN</span>
-            </h1>
-            <p className="text-gray-500 text-lg mb-10 max-w-xl leading-relaxed">
+            <h1 className="text-5xl font-black text-white mb-6 tracking-tight">Start Your Future at UNIVEN</h1>
+            <p className="text-xl text-white/90 leading-relaxed font-medium">
               Join a vibrant community of scholars and researchers. Our streamlined application process is designed to help you transition smoothly into university life.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <button className="bg-secondary text-white font-bold px-8 py-4 rounded-xl flex items-center gap-2 hover:brightness-110 transition-all shadow-lg shadow-secondary/20">
-                Start Application <ArrowRight size={20} />
-              </button>
-              <button className="bg-white text-primary border-2 border-gray-100 font-bold px-8 py-4 rounded-xl hover:bg-gray-50 transition-all">
-                Check Status
-              </button>
-            </div>
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="flex-1"
-          >
-            <div className="relative">
-              <div className="absolute -inset-4 bg-secondary/10 rounded-[2.5rem] -rotate-2"></div>
-              <img 
-                src="https://nebworksmedia.com/wp-content/uploads/2026/02/Graduation-Ceremony.png" 
-                alt="UNIVEN Graduation" 
-                className="relative rounded-[2rem] shadow-2xl w-full object-cover aspect-[4/3]"
-                referrerPolicy="no-referrer"
-              />
-            </div>
           </motion.div>
         </div>
-      </section>
+      </div>
+
+      <div className="max-w-[1280px] mx-auto px-6 py-12">
+        <div className="flex items-center gap-2 mb-8">
+          <div className="w-8 h-0.5 bg-secondary"></div>
+          <span className="text-primary font-bold text-xs uppercase tracking-widest">Admissions 2026/2027</span>
+        </div>
+        
+        <div className="flex flex-wrap gap-4 mb-20">
+          <button className="bg-secondary text-white font-bold px-8 py-4 rounded-xl flex items-center gap-2 hover:brightness-110 transition-all shadow-lg shadow-secondary/20">
+            Start Application <ArrowRight size={20} />
+          </button>
+          <button className="bg-white text-primary border-2 border-gray-100 font-bold px-8 py-4 rounded-xl hover:bg-gray-50 transition-all">
+            Check Status
+          </button>
+        </div>
 
       {/* Main Content */}
       <div className="max-w-[1280px] mx-auto px-6 mt-16">
@@ -250,5 +242,6 @@ export const Admissions: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  </div>
+);
 };

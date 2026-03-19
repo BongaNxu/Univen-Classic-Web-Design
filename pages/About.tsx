@@ -9,7 +9,7 @@ export const About: React.FC = () => {
       {/* Hero Section */}
       <div className="relative h-[400px] overflow-hidden">
         <img 
-          src="https://picsum.photos/seed/univen-campus/1920/1080" 
+          src="https://nebworksmedia.com/wp-content/uploads/2026/03/0001083475_resized_healthsciencesbuildinguniven1022.jpg" 
           alt="UNIVEN Campus" 
           className="w-full h-full object-cover brightness-50"
           referrerPolicy="no-referrer"

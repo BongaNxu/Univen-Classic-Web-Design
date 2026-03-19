@@ -17,13 +17,25 @@ export const Services: React.FC = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      {/* Hero */}
-      <div className="bg-white border-b border-gray-200 py-20 px-6">
-        <div className="max-w-[1280px] mx-auto text-center">
-          <h1 className="text-5xl font-black text-primary mb-6 tracking-tight">University Services</h1>
-          <p className="text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
-            We provide a wide range of support services to enhance your university experience and ensure your success.
-          </p>
+      {/* Hero Section */}
+      <div className="relative h-[400px] overflow-hidden">
+        <img 
+          src="https://nebworksmedia.com/wp-content/uploads/2026/03/0001083475_resized_healthsciencesbuildinguniven1022.jpg" 
+          alt="UNIVEN Services" 
+          className="w-full h-full object-cover brightness-50"
+          referrerPolicy="no-referrer"
+        />
+        <div className="absolute inset-0 flex items-center justify-center text-center px-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="max-w-4xl"
+          >
+            <h1 className="text-5xl font-black text-white mb-6 tracking-tight">University Services</h1>
+            <p className="text-xl text-white/90 leading-relaxed font-medium">
+              We provide a wide range of support services to enhance your university experience and ensure your success.
+            </p>
+          </motion.div>
         </div>
       </div>
 
