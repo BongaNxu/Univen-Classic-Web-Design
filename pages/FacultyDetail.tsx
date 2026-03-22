@@ -27,7 +27,8 @@ export const FacultyDetail: React.FC = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center" 
           style={{ 
-            backgroundImage: `linear-gradient(rgba(49, 76, 122, 0.8), rgba(49, 76, 122, 0.9)), url("${faculty.image}")` 
+            // backgroundImage: `linear-gradient(rgba(49, 76, 122, 0.3), rgba(49, 76, 122, 0.4)), url("${faculty.image}")` 
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url("${faculty.image}")` 
           }}
         ></div>
         <div className="relative max-w-[1280px] mx-auto h-full flex flex-col justify-center px-6">
@@ -38,8 +39,8 @@ export const FacultyDetail: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <h1 className="text-white text-5xl md:text-6xl font-black leading-tight mb-4">
-              Faculty of <span  style={{color: '#bea65d'}}>{faculty.name}</span>
+            <h1 className="text-white text-5xl md:text-6xl font-black leading-tight mb-4 text-shadow-sm">
+              Faculty of <span style={{color: '#bea65d'}}>{faculty.name}</span>
             </h1>
             <p className="text-white/90 text-xl max-w-3xl leading-relaxed">
               {faculty.description}

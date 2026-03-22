@@ -54,7 +54,7 @@ export const FACULTIES: Faculty[] = [
       }
     },
     departments: ['Accounting', 'Business Management', 'Economics', 'Law', 'Public Management'],
-    image: 'https://nebworksmedia.com/wp-content/uploads/2026/02/stock-photo-a-glowing-light-bulb.jpg'
+    image: 'https://nebworksmedia.com/wp-content/uploads/2026/02/14.png'
   },
   {
     id: 'humanities',
@@ -72,7 +72,7 @@ export const FACULTIES: Faculty[] = [
       }
     },
     departments: ['Education', 'Social Sciences', 'Languages', 'Art & Design', 'Theology'],
-    image: 'https://nebworksmedia.com/wp-content/uploads/2026/02/14.png'
+    image: 'https://nebworksmedia.com/wp-content/uploads/2026/03/Humanities.jpg'
   }
 ];
 
