@@ -12,6 +12,7 @@ import { News } from './pages/News';
 import { Services } from './pages/Services';
 import { Contact } from './pages/Contact';
 import { FacultyDetail } from './pages/FacultyDetail';
+import { DepartmentDetail } from './pages/DepartmentDetail';
 
 const App: React.FC = () => {
   return (
@@ -29,6 +30,7 @@ const App: React.FC = () => {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faculty/:id" element={<FacultyDetail />} />
+          <Route path="/faculty/:facultyId/department/:deptId" element={<DepartmentDetail />} />
         </Routes>
       </Layout>
     </Router>

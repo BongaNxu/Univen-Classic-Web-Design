@@ -76,12 +76,16 @@ export const FacultyDetail: React.FC = () => {
               <h2 className="text-2xl font-black text-primary mb-8">Academic Departments</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {faculty.departments.map((dept, idx) => (
-                  <div key={idx} className="flex items-center gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100 group hover:border-secondary transition-all">
+                  <Link 
+                    key={idx} 
+                    to={`/faculty/${faculty.id}/department/${dept.id}`}
+                    className="flex items-center gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100 group hover:border-secondary transition-all"
+                  >
                     <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-secondary shadow-sm group-hover:bg-secondary group-hover:text-white transition-all">
                       <BookOpen size={20} />
                     </div>
-                    <span className="font-bold text-primary">{dept}</span>
-                  </div>
+                    <span className="font-bold text-primary">{dept.name}</span>
+                  </Link>
                 ))}
               </div>
             </section>
