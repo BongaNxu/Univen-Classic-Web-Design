@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Chatbot } from './Chatbot';
+import { AccessibilityMenu } from './AccessibilityMenu';
 import { ChevronDown, Search, BookOpen, GraduationCap, Users, Award } from 'lucide-react';
 import { FACULTIES } from '../constants';
 
@@ -257,6 +258,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
       <main className="flex-1">{children}</main>
       <Footer />
       <Chatbot />
+      <AccessibilityMenu />
     </div>
   );
 };

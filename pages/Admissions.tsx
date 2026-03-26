@@ -8,8 +8,8 @@ export const Admissions: React.FC = () => {
     <div className="bg-[#F8F9FA] min-h-screen pb-20">
       {/* Hero Section */}
       <div className="relative h-[400px] overflow-hidden">
-        <img 
-          src="https://picsum.photos/seed/univen-admissions/1920/1080" 
+        <img     
+          src="https://nebworksmedia.com/wp-content/uploads/2026/03/0001083475_resized_healthsciencesbuildinguniven1022.jpg" 
           alt="Admissions at UNIVEN" 
           className="w-full h-full object-cover brightness-50"
           referrerPolicy="no-referrer"

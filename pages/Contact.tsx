@@ -104,7 +104,7 @@ export const Contact: React.FC = () => {
       {/* Map Placeholder */}
       <div className="h-[400px] bg-gray-200 relative overflow-hidden">
         <img 
-          src="https://picsum.photos/seed/univen-map/1920/600" 
+          src="https://nebworksmedia.com/portfolio/univen-wp/wp-content/uploads/2026/03/univen-library1.jpg" 
           alt="Map" 
           className="w-full h-full object-cover grayscale opacity-50"
           referrerPolicy="no-referrer"

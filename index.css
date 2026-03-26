@@ -1,0 +1,65 @@
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Public Sans", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #314c7a;
+  --color-secondary: #154175;
+  --color-tertiary: #154175;
+  --color-background-light: #f6f6f8;
+  --color-background-dark: #101622;
+}
+
+/* Accessibility classes */
+.high-contrast {
+  filter: contrast(1.5) brightness(1.1);
+}
+
+.grayscale {
+  filter: grayscale(1);
+}
+
+.underline-links a {
+  text-decoration: underline !important;
+}
+
+/* Custom styles for accessibility menu */
+.accessibility-panel {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode overrides if needed */
+.dark body {
+  background-color: #101622;
+  color: #f6f6f8;
+}
+
+.dark .bg-white {
+  background-color: #1a2234 !important;
+  color: #f6f6f8 !important;
+}
+
+.dark .text-gray-800, .dark .text-gray-900, .dark .text-gray-700 {
+  color: #e2e8f0 !important;
+}
+
+.dark .text-gray-500, .dark .text-gray-600 {
+  color: #94a3b8 !important;
+}
+
+.dark .border-gray-200, .dark .border-gray-100 {
+  border-color: #2d3748 !important;
+}
+
+.dark .hover\:bg-gray-50:hover {
+  background-color: #2d3748 !important;
+}
+
+.dark .bg-gray-100 {
+  background-color: #2d3748 !important;
+}
+
+.dark .bg-gray-50 {
+  background-color: #1e293b !important;
+}

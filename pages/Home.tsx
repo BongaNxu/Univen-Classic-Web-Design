@@ -1,31 +1,155 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'motion/react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { NEWS, EVENTS, FACULTIES } from '../constants';
 
 export const Home: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [direction, setDirection] = useState(0);
+  
+  const heroSlides = [
+    {
+      title: <>Creating Future <span style={{color: '#bea65d'}}>Leaders</span> Through Knowledge</>,
+      description: "Experience a world-class education at the University of Venda. We are dedicated to shaping the next generation of global impact makers.",
+      image: "https://nebworksmedia.com/wp-content/uploads/2026/03/ousa-chea-gKUC4TMhOiY-unsplash-1-scaled-1.jpg",
+      link: "/apply",
+      linkText: "Start Your Application",
+      category: "",
+      isDefault: true
+    },
+    ...NEWS.slice(0, 2).map(item => ({
+      title: item.title,
+      description: item.description,
+      image: item.imageUrl,
+      link: "/news",
+      linkText: "Read More",
+      category: item.category,
+      isDefault: false
+    }))
+  ];
+
+  const paginate = (newDirection: number) => {
+    setDirection(newDirection);
+    setCurrentSlide((prev) => (prev + newDirection + heroSlides.length) % heroSlides.length);
+  };
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      paginate(1);
+    }, 10000);
+    return () => clearInterval(timer);
+  }, [heroSlides.length]);
+
+  const variants = {
+    enter: (direction: number) => ({
+      x: direction > 0 ? '100%' : '-100%',
+      opacity: 0
+    }),
+    center: {
+      zIndex: 1,
+      x: 0,
+      opacity: 1
+    },
+    exit: (direction: number) => ({
+      zIndex: 0,
+      x: direction < 0 ? '100%' : '-100%',
+      opacity: 0
+    })
+  };
+
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[900px] w-full overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("https://nebworksmedia.com/wp-content/uploads/2026/03/ousa-chea-gKUC4TMhOiY-unsplash-1-scaled-1.jpg")'}}></div>
-        <div className="relative max-w-[1280px] mx-auto h-full flex flex-col justify-center px-6">
-          <div className="max-w-2xl">
-            <h2 className="text-white text-6xl font-black leading-tight mb-6 text-shadow-sm">
-              Creating Future <span style={{color: '#bea65d'}}>Leaders</span> Through Knowledge
-            </h2>
-            <p className="text-white/90 text-xl font-normal leading-relaxed mb-10 max-w-xl">
-              Experience a world-class education at the University of Venda. We are dedicated to shaping the next generation of global impact makers.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link to="/apply" className="bg-secondary text-white text-lg font-bold px-8 py-4 rounded-xl hover:brightness-110 transition-all flex items-center gap-2">
-                Start Your Application <span className="material-symbols-outlined">arrow_forward</span>
-              </Link>
-              <button className="bg-white/10 backdrop-blur-md text-white border border-white/30 text-lg font-bold px-8 py-4 rounded-xl hover:bg-white/20 transition-all">
-                Take a Virtual Tour
-              </button>
+      <section className="relative h-[900px] w-full overflow-hidden bg-black">
+        <AnimatePresence initial={false} custom={direction}>
+          <motion.div
+            key={currentSlide}
+            custom={direction}
+            variants={variants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{
+              x: { type: "spring", stiffness: 300, damping: 30 },
+              opacity: { duration: 0.5 }
+            }}
+            className="absolute inset-0"
+          >
+            <div 
+              className="absolute inset-0 bg-cover bg-center" 
+              style={{
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url("${heroSlides[currentSlide].image}")`,
+              }}
+            ></div>
+            
+            <div className="relative max-w-[1280px] mx-auto h-full flex flex-col justify-center px-6">
+              <motion.div 
+                initial={{ y: 30, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.3, duration: 0.8 }}
+                className="max-w-3xl"
+              >
+                {!heroSlides[currentSlide].isDefault && (
+                  <span className="inline-block px-4 py-1.5 bg-tertiary text-white text-xs font-black rounded-full mb-6 tracking-widest uppercase">
+                    Latest News: {heroSlides[currentSlide].category}
+                  </span>
+                )}
+                <h2 className="text-white text-6xl font-black leading-tight mb-6 text-shadow-sm">
+                  {heroSlides[currentSlide].title}
+                </h2>
+                <p className="text-white/90 text-xl font-normal leading-relaxed mb-10 max-w-xl">
+                  {heroSlides[currentSlide].description}
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Link to={heroSlides[currentSlide].link} className="bg-secondary text-white text-lg font-bold px-8 py-4 rounded-xl hover:brightness-110 transition-all flex items-center gap-2">
+                    {heroSlides[currentSlide].linkText} <span className="material-symbols-outlined">arrow_forward</span>
+                  </Link>
+                  {heroSlides[currentSlide].isDefault && (
+                    <button className="bg-white/10 backdrop-blur-md text-white border border-white/30 text-lg font-bold px-8 py-4 rounded-xl hover:bg-white/20 transition-all">
+                      Take a Virtual Tour
+                    </button>
+                  )}
+                </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Navigation Arrows */}
+        <div className="absolute inset-y-0 left-0 right-0 flex items-center justify-between px-4 md:px-8 z-30 pointer-events-none">
+          <button 
+            onClick={() => paginate(-1)}
+            className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all pointer-events-auto group"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft size={32} className="group-hover:-translate-x-1 transition-transform" />
+          </button>
+          <button 
+            onClick={() => paginate(1)}
+            className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all pointer-events-auto group"
+            aria-label="Next slide"
+          >
+            <ChevronRight size={32} className="group-hover:translate-x-1 transition-transform" />
+          </button>
+        </div>
+
+        {/* Slide Indicators */}
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-3 z-30">
+          {heroSlides.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => {
+                setDirection(idx > currentSlide ? 1 : -1);
+                setCurrentSlide(idx);
+              }}
+              className={`h-1.5 transition-all duration-500 rounded-full ${
+                currentSlide === idx ? 'w-12 bg-tertiary' : 'w-6 bg-white/30 hover:bg-white/50'
+              }`}
+              aria-label={`Go to slide ${idx + 1}`}
+            />
+          ))}
         </div>
       </section>
 

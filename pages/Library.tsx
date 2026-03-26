@@ -9,7 +9,7 @@ export const Library: React.FC = () => {
       {/* Hero Section */}
       <div className="relative h-[400px] overflow-hidden">
         <img 
-          src="https://www.shutterstock.com/shutterstock/photos/2477879657/display_1500/stock-photo-two-young-male-students-climb-a-bookshelf-in-a-library-2477879657.jpg" 
+          src="https://nebworksmedia.com/portfolio/univen-wp/wp-content/uploads/2026/03/univen-library1.jpg" 
           // src="https://picsum.photos/seed/univen-library/1920/1080" 
           alt="UNIVEN Library" 
           className="w-full h-full object-cover brightness-50"

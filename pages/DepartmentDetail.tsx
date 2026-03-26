@@ -24,11 +24,12 @@ export const DepartmentDetail: React.FC = () => {
   return (
     <div className="bg-[#F8F9FA] min-h-screen pb-20">
       {/* Hero Section */}
-      <section className="relative h-[400px] w-full overflow-hidden">
+      <section className="relative h-[600px] w-full overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center" 
           style={{ 
-            backgroundImage: `linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.8)), url("${faculty.image}")` 
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url("${faculty.image}")` 
+            // backgroundImage: `linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.8)), url("${faculty.image}")` 
           }}
         ></div>
         <div className="relative max-w-[1280px] mx-auto h-full flex flex-col justify-center px-6">
