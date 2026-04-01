@@ -13,6 +13,7 @@ import { Services } from './pages/Services';
 import { Contact } from './pages/Contact';
 import { FacultyDetail } from './pages/FacultyDetail';
 import { DepartmentDetail } from './pages/DepartmentDetail';
+import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { AccessibilityProvider } from './components/AccessibilityProvider';
 
 const App: React.FC = () => {
@@ -33,6 +34,7 @@ const App: React.FC = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/faculty/:id" element={<FacultyDetail />} />
             <Route path="/faculty/:facultyId/department/:deptId" element={<DepartmentDetail />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
         </Layout>
       </Router>

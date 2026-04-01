@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Chatbot } from './Chatbot';
 import { AccessibilityMenu } from './AccessibilityMenu';
+import { CookieConsent } from './CookieConsent';
 import { ChevronDown, Search, BookOpen, GraduationCap, Users, Award } from 'lucide-react';
 import { FACULTIES } from '../constants';
 
@@ -222,7 +223,7 @@ const Footer = () => (
             <li><a className="hover:text-primary transition-colors" href="#">Help Desk</a></li>
             <li><a className="hover:text-primary transition-colors" href="#">Contact Us</a></li>
             <li><a className="hover:text-primary transition-colors" href="#">PAIA</a></li>
-            <li><a className="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+            <li><Link className="hover:text-primary transition-colors" to="/privacy-policy">Privacy Policy</Link></li>
           </ul>
         </div>
         <div>
@@ -259,6 +260,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
       <Footer />
       <Chatbot />
       <AccessibilityMenu />
+      <CookieConsent />
     </div>
   );
 };
