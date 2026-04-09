@@ -2,31 +2,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Tag, ArrowRight, Share2 } from 'lucide-react';
+import { NEWS } from '../constants';
 
 export const News: React.FC = () => {
-  const newsItems = [
-    {
-      title: "UNIVEN Celebrates 40 Years of Excellence",
-      date: "March 10, 2026",
-      category: "Events",
-      image: "https://nebworksmedia.com/wp-content/uploads/2026/03/UNIVEN-Celebrates-40-Years-of-Excellence.jpg",
-      excerpt: "The University of Venda marks a major milestone with a series of commemorative events and community projects."
-    },
-    {
-      title: "New Research Grant for Climate Adaptation",
-      date: "March 08, 2026",
-      category: "Research",
-      image: "https://nebworksmedia.com/wp-content/uploads/2026/03/New-Research-Grant-for-Climate-Adaptation.jpg",
-      excerpt: "Faculty of Science receives R5 million grant to study climate resilience in local agricultural systems."
-    },
-    {
-      title: "Student Leadership Elections Results",
-      date: "March 05, 2026",
-      category: "Campus Life",
-      image: "https://nebworksmedia.com/wp-content/uploads/2026/03/stock-photo-a-cute-black-female-university-student-on-campus-with-backpack-1987030421.jpg",
-      excerpt: "The SRC elections concluded successfully with a record voter turnout this year."
-    }
-  ];
+  const newsItems = NEWS;
 
   return (
     <div className="bg-white min-h-screen">
@@ -74,7 +53,7 @@ export const News: React.FC = () => {
             >
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden mb-6">
                 <img 
-                  src={item.image} 
+                  src={item.imageUrl} 
                   alt={item.title} 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   referrerPolicy="no-referrer"
@@ -101,7 +80,7 @@ export const News: React.FC = () => {
                 {item.title}
               </h2>
               <p className="text-gray-500 text-sm leading-relaxed mb-6">
-                {item.excerpt}
+                {item.description}
               </p>
               
               <button className="flex items-center gap-2 text-primary font-black text-sm uppercase tracking-widest group-hover:gap-4 transition-all">

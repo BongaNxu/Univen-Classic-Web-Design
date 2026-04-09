@@ -176,13 +176,13 @@ export const Home: React.FC = () => {
           <div className="lg:w-2/3">
             <div className="flex items-center justify-between mb-8">
               <h3 className="text-3xl font-black tracking-tight">Latest News</h3>
-              <a className="text-primary font-bold flex items-center gap-1 hover:underline text-sm" href="#">
+              <Link className="text-primary font-bold flex items-center gap-1 hover:underline text-sm" to="/news">
                 All News <span className="material-symbols-outlined text-sm text-tertiary">arrow_forward</span>
-              </a>
+              </Link>
             </div>
             <div className="h-1 w-20 bg-tertiary mb-8"></div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {NEWS.map(item => (
+              {NEWS.slice(0, 2).map(item => (
                 <div key={item.id} className="flex flex-col gap-4 group cursor-pointer">
                   <div className="h-56 w-full rounded-xl bg-gray-200 bg-cover bg-center overflow-hidden transition-transform group-hover:scale-[1.02]" style={{backgroundImage: `url(${item.imageUrl})`}}></div>
                   <div className="flex flex-col gap-2">

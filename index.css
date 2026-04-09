@@ -63,3 +63,9 @@
 .dark .bg-gray-50 {
   background-color: #1e293b !important;
 }
+
+.bg-cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center !important;
+}

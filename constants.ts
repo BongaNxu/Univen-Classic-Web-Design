@@ -589,19 +589,75 @@ export const COURSES: Course[] = [
 export const NEWS: NewsItem[] = [
   {
     id: 'n1',
-    category: 'Academics',
-    title: 'UNIVEN Celebrates 2026 Autumn Graduation Ceremony',
-    description: 'The university successfully conferred degrees to over 3,000 graduates this season across various faculties...',
-    date: 'March 10, 2026',
-    imageUrl: 'https://nebworksmedia.com/wp-content/uploads/2026/02/2.png'
+    category: 'Latest News',
+    title: 'Shaping Tomorrow’s Leaders: A Transformative Beginning for University Interns',
+    description: 'Marking the critical shift from academic life to the professional world, the University of Venda’s Human Resources Department hosted a...',
+    date: 'April 09, 2026',
+    imageUrl: 'https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img/https://www.univen.ac.za/wp-content/uploads/2026/04/Screenshot-2026-04-09-120742-1024x441.png'
   },
   {
     id: 'n2',
+    category: 'Latest News',
+    title: 'New Voice, Bold Vision: Vusani Rathogwa Joins Marketing, Branding and Communication as Social Media Officer',
+    description: 'The Department of Marketing, Branding and Communication is pleased to announce the appointment of Vusani Rathogwa as Social Media Officer',
+    date: 'April 09, 2026',
+    imageUrl: 'https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img/https://www.univen.ac.za/wp-content/uploads/2026/04/Screenshot-2026-04-09-083321.png'
+  },
+  {
+    id: 'n3',
+    category: 'Latest News',
+    title: 'Bidding a Heartfelt Farewell to UNIVEN Interns',
+    description: 'The Human Resources Department successfully hosted an Interns Farewell and Certificate Handover Ceremony on 31 March 2026 at the Research',
+    date: 'April 08, 2026',
+    imageUrl: 'https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img/https://www.univen.ac.za/wp-content/uploads/2026/04/Screenshot-2026-04-08-160737-1024x374.png'
+  },
+  {
+    id: 'n4',
+    category: 'Latest News',
+    title: 'Faculty of Science, Engineering and Agriculture Prepares Honours students for the Year Ahead',
+    description: 'The University of Venda has its strategic focus on strengthening research capacity, enhancing student success, and producing graduates who contribute',
+    date: 'April 08, 2026',
+    imageUrl: 'https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img/https://www.univen.ac.za/wp-content/uploads/2026/04/Screenshot-2026-04-08-152724-1024x439.png'
+  },
+  {
+    id: 'n5',
+    category: 'Latest News',
+    title: 'UNIVEN Weekly e-Newsletter _ Issue 69',
+    description: 'Download UNIVEN Weekly e-Newsletter _ Issue 69',
+    date: 'April 08, 2026',
+    imageUrl: 'https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img/https://www.univen.ac.za/wp-content/uploads/2026/04/Screenshot-2026-04-08-154557.png'
+  },
+  {
+    id: 'n6',
+    category: 'Latest News',
+    title: 'Advancing Academic Funding: University Appoints New Academic Grants Administration Manager',
+    description: 'The University is proud to announce the appointment of Mr Ntobeko Mbuyisa as Manager of Academic Grants Administration, effective',
+    date: 'April 07, 2026',
+    imageUrl: 'https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img/https://www.univen.ac.za/wp-content/uploads/2026/04/Screenshot-2026-04-07-150018.png'
+  },
+  {
+    id: 'n7',
+    category: 'Events',
+    title: 'UNIVEN Celebrates 40 Years of Excellence',
+    description: 'The University of Venda marks a major milestone with a series of commemorative events and community projects.',
+    date: 'March 10, 2026',
+    imageUrl: 'https://nebworksmedia.com/wp-content/uploads/2026/03/UNIVEN-Celebrates-40-Years-of-Excellence.jpg'
+  },
+  {
+    id: 'n8',
     category: 'Research',
-    title: 'Groundbreaking Research in Sustainable Agriculture',
-    description: 'Our Faculty of Science has published a new study focused on drought-resistant crop cultivation techniques...',
+    title: 'New Research Grant for Climate Adaptation',
+    description: 'Faculty of Science receives R5 million grant to study climate resilience in local agricultural systems.',
     date: 'March 08, 2026',
-    imageUrl: 'https://nebworksmedia.com/wp-content/uploads/2026/02/5.png'
+    imageUrl: 'https://nebworksmedia.com/wp-content/uploads/2026/03/New-Research-Grant-for-Climate-Adaptation.jpg'
+  },
+  {
+    id: 'n9',
+    category: 'Campus Life',
+    title: 'Student Leadership Elections Results',
+    description: 'The SRC elections concluded successfully with a record voter turnout this year.',
+    date: 'March 05, 2026',
+    imageUrl: 'https://nebworksmedia.com/wp-content/uploads/2026/03/stock-photo-a-cute-black-female-university-student-on-campus-with-backpack-1987030421.jpg'
   }
 ];
 
